@@ -1,0 +1,41 @@
+---
+import Social from "./Social.astro";
+
+const socialMedias = {
+  github: {
+    link: "https://github.com/Arnaiz23",
+    username: "Arnaiz23"
+  },
+  linkedin: {
+    link: "https://es.linkedin.com/in/adri%C3%A1n-arnaiz-fern%C3%A1ndez-b67743227/en?trk=people-guest_people_search-card",
+    username: "Adrián Arnaiz Fernández"
+  },
+  portfolio: {
+    link: "https://arnaizdev.com"
+  }
+}
+---
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  ul {
+    display: flex;
+    gap: 20px 10px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+</style>
+
+<footer>
+  <ul>
+    <Social link={socialMedias.github.link} username={socialMedias.github.username} title="Github" />
+    <Social link={socialMedias.linkedin.link} username={socialMedias.linkedin.username} title="Linkedin" />
+    <Social link={socialMedias.portfolio.link} title="Portfolio" />
+  </ul>
+</footer>

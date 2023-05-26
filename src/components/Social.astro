@@ -1,0 +1,20 @@
+---
+const {link, username, title} = Astro.props
+---
+
+<li>
+  <a href={link} target="_blank">{title} {username && `: ${username}`}</a>
+</li>
+
+<style>
+  a {
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #4c1d95;
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+  }
+</style>
